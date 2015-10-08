@@ -31,18 +31,18 @@ var Application = React.createClass({
   },
 
   removeAllTweetsFromCollection: function() {
-    this.setState: {
+    this.setState({
       collectionTweets: {}
-    }
+    })
   },
 
   render: function() {
     return (
       <div className="container-fluid">
         <div className="row">
-        
+
           <div className="col-md-4 text-center">
-            <Stream onAddTweetToCollection={this.addTweetToCollection}
+            <Stream onAddTweetToCollection={this.addTweetToCollection} />
           </div>
 
           <div className="col-md-8">
