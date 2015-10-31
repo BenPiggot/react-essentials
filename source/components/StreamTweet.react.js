@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Header = require('./Header.react');
-var Tweet require('./Tweet.react');
+var Tweet = require('./Tweet.react');
 
 var StreamTweet = React.createClass({
 
@@ -31,7 +31,7 @@ var StreamTweet = React.createClass({
     window.snapterest.tweetHtml = componentDOMRepresentation.children[1].outerHTML;
   },
 
-  componentWillReceiveProps: function() {
+  componentWillReceiveProps: function(nextProps) {
     var currentTweetLength = this.props.tweet.text.length;
     var nextTweetLength = nextProps.tweet.text.length;
     var isNumberOfCharactersIncreasing = (nextTweetLength > currentTweetLength);
@@ -58,17 +58,20 @@ var StreamTweet = React.createClass({
     return (nextProps.tweet.text.length > 1);
   },
 
-  componentWillUpdate: function(prevProps, nextProps) {
+  componentWillUpdate: function(nextProps, nextState) {
     window.snapterest.numberOfDisplayedTweets++;
-  }
+  },
+
+  componentDidUpdate: function (prevProps, prevState) {
+    window.snapterest.numberOfDisplayedTweets++;
+  },
 
   componentWillUnmount: function() {
     delete window.snapterest;
-  }
+  },
 
   render: function() {
-    console.log('[Snapterest] StreamTweet: Running render()');
-
+    console.log(this.props)
     return (  
       <section>
         <Header text={this.state.headerText} />
@@ -79,3 +82,5 @@ var StreamTweet = React.createClass({
     );
   }
 })
+
+module.exports = StreamTweet;

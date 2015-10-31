@@ -20,7 +20,7 @@ var Collection = React.createClass({
   },
 
   getListOfTweetIds: function() {
-    return Object.keys(this.props.tweet)
+    return Object.keys(this.props.tweets)
   },
 
   getNumberOfTweetsInCollection: function() {
@@ -30,7 +30,7 @@ var Collection = React.createClass({
   render: function() {
     var NumberOfTweetsInCollection = this.getNumberOfTweetsInCollection();
 
-    if (getNumberOfTweetsInCollection > 0 ) {
+    if (NumberOfTweetsInCollection > 0 ) {
 
       var tweets = this.props.tweets;
       var htmlMarkup = this.createHtmlMarkupStringOfTweetList();

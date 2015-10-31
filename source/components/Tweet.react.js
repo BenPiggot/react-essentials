@@ -17,7 +17,7 @@ var imageStyle = {
 }
 
 
-var Tweet = Raect.createClass({
+var Tweet = React.createClass({
 
   propTypes: {
 
@@ -38,10 +38,12 @@ var Tweet = Raect.createClass({
   },
 
   handleImageClick: function() {
+    console.log('handler firing')
     var tweet = this.props.tweet;
     var onImageClick = this.props.onImageClick;
-
+    console.log(this.props.onImageClick)
     if (onImageClick) {
+      console.log('handle still firing')
       onImageClick(tweet)
     }
   },
@@ -51,7 +53,7 @@ var Tweet = Raect.createClass({
     var tweetMediaUrl = tweet.media[0].url;
 
     return (
-      <div style={tweetStyle} />
+      <div style={tweetStyle} >
         <img src={tweetMediaUrl} onClick={this.handleImageClick} style={imageStyle} />
       </div>
     )

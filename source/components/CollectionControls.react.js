@@ -53,7 +53,7 @@ var CollectionControls = React.createClass({
           name={this.state.name}
           onChangeCollectionName={this.setCollectionName}
           onChangeCollectionName={this.toggleEditCollectionName} />
-
+    
       )
     }
 

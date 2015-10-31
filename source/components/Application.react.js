@@ -11,6 +11,7 @@ var Application = React.createClass({
   },
 
   addTweetToCollection: function(tweet) {
+    console.log('happening')
     var collectionTweets = this.state.collectionTweets;
 
     collectionTweets[tweet.id] = tweet;

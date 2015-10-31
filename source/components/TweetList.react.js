@@ -1,5 +1,5 @@
 var React = require('react');
-var Tweet = require('./Tweet.react.js')l
+var Tweet = require('./Tweet.react.js');
 
 
 var listStyle = {
@@ -25,7 +25,7 @@ var TweetList = React.createClass({
 
     if (handleRemoveTweetFromCollection) {
       tweetElement = (
-        <Tweet tweet={tweet} onImageClick={handleRemoveTweetFromCollection} />;
+        <Tweet tweet={tweet} onImageClick={handleRemoveTweetFromCollection} />
         )
     } 
 
@@ -45,9 +45,7 @@ var TweetList = React.createClass({
         {tweetElements}
       </ul>
       )
-    };
-
-  }
+    }
 })
 
 
