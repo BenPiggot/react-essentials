@@ -26047,7 +26047,7 @@ var Collection = React.createClass({
         'div',
         null,
         React.createElement(CollectionControls, {
-          numberOfTweetsInCollection: numberOfTweetsInCollection,
+          numberOfTweetsInCollection: NumberOfTweetsInCollection,
           htmlMarkup: htmlMarkup,
           onRemoveAllTweetsFromCollection: removeAllTweetsFromCollection }),
         React.createElement(TweetList, {
@@ -26100,6 +26100,7 @@ var CollectionControls = React.createClass({
       React.createElement(
         'strong',
         null,
+        ' ',
         this.state.name
       ),
       ' collection'
@@ -26407,7 +26408,7 @@ var StreamTweet = React.createClass({
       React.createElement(Header, { text: this.state.headerText }),
       React.createElement(Tweet, {
         tweet: this.props.tweet,
-        onImageClick: this.props.onAddTweetToColleciton })
+        onImageClick: this.props.onAddTweetToCollection })
     );
   }
 });
@@ -26460,7 +26461,6 @@ var Tweet = React.createClass({
     var onImageClick = this.props.onImageClick;
     console.log(this.props.onImageClick);
     if (onImageClick) {
-      console.log('handle still firing');
       onImageClick(tweet);
     }
   },

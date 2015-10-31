@@ -43,7 +43,6 @@ var Tweet = React.createClass({
     var onImageClick = this.props.onImageClick;
     console.log(this.props.onImageClick)
     if (onImageClick) {
-      console.log('handle still firing')
       onImageClick(tweet)
     }
   },

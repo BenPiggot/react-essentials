@@ -41,7 +41,7 @@ var Collection = React.createClass({
         <div>
 
           <CollectionControls
-            numberOfTweetsInCollection = {numberOfTweetsInCollection}
+            numberOfTweetsInCollection = {NumberOfTweetsInCollection}
             htmlMarkup = {htmlMarkup}
             onRemoveAllTweetsFromCollection = {removeAllTweetsFromCollection} />
 

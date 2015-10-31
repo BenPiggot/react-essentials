@@ -27,7 +27,7 @@ var CollectionControls = React.createClass({
 
     return (
       <span> {text} 
-        <strong>{this.state.name}</strong> collection 
+        <strong> {this.state.name}</strong> collection 
       </span>
     )
   },

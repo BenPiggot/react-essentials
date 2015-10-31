@@ -77,7 +77,7 @@ var StreamTweet = React.createClass({
         <Header text={this.state.headerText} />
         <Tweet
           tweet={this.props.tweet}
-          onImageClick={this.props.onAddTweetToColleciton} />
+          onImageClick={this.props.onAddTweetToCollection} />
       </section>
     );
   }
