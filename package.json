@@ -13,11 +13,12 @@
     "browserify": "^11.2.0",
     "gulp": "^3.9.0",
     "jest-cli": "^0.7.0",
+    "react-addons-test-utils": "^0.14.2",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "react": "^0.14.0-rc1",
-    "react-dom": "^0.14.0-rc1",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
     "snapkite-stream-client": "^1.0.3"
   }
 }
