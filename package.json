@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-jest": "^6.0.1",
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
     "gulp": "^3.9.0",
@@ -17,8 +18,20 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "flux": "^2.1.1",
+    "object-assign": "^4.0.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "snapkite-stream-client": "^1.0.3"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   }
 }
