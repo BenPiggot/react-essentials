@@ -23,7 +23,7 @@ var Stream = React.createClass({
     this.setState({
       tweet: TweetStore.getTweet()
     })
-  }
+  },
 
   render: function () {
     var tweet = this.state.tweet;
